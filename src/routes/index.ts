@@ -1,10 +1,10 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
 
-const tasks = require("./tasks.js");
+import tasks from "./tasks";
 router.use("/tasks", tasks);
 
-router.use("/", (req, res) => {
+router.use("/", (_: express.Request, res: express.Response) => {
   res.json({ hello: "world" });
 });
 
