@@ -8,4 +8,4 @@ router.use("/", (_: express.Request, res: express.Response) => {
   res.json({ hello: "world" });
 });
 
-module.exports = router;
+export default router;

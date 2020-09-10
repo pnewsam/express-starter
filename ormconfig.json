@@ -1,0 +1,12 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": "5432",
+  "username": "postgres",
+  "password": "postgres",
+  "synchronize": true,
+  "logging": false,
+  "database": "express_starter",
+  "entities": ["src/entities/**/*.ts"],
+  "migrations": ["src/migrations/**/*.ts"]
+}

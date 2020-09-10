@@ -1,21 +1,15 @@
 import express from "express";
 const router = express.Router();
-
-interface Task {
-  text: string;
-}
-
-let tasks: Task[] = [];
+import TasksController from "../controllers/tasksController";
 
 router.get("/", (req, res) => {
   res.json({ youHave: "arrived!" });
 });
 
-router.post("/new", (req, res) => {
-  console.log({ body: req.body, params: req.params });
-  const { task } = req.body;
-  tasks.push(task);
-  res.json({ tasks });
+router.post("/new", async (req, res) => {
+  const { body } = req;
+  const newTask = await TasksController.createTask(body.task);
+  res.json({ newTask });
 });
 
 export default router;
