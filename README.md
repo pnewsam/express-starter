@@ -4,6 +4,14 @@ This is a starter repo for an Express server with Typescript, TypeORM, Postgres.
 
 ## Setup
 
+### Repository
+
+Clone the repository. Then install the dependencies.
+
+```
+npm install
+```
+
 ### Database
 
 Create your Postgres database.
